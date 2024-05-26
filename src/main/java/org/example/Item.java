@@ -1,3 +1,5 @@
+package org.example;
+
 public class Item {
     private int _Id;
     private int Weight;
@@ -8,7 +10,7 @@ public class Item {
         this._Id = id;
         this.Weight = weight;
         this.Value = value;
-        this.Ratio = value / weight;
+        this.Ratio = (double) value / weight;
     }
 
     public int get_Id(){
@@ -25,5 +27,10 @@ public class Item {
 
     public double getRatio(){
         return this.Ratio;
+    }
+
+    @Override
+    public String toString(){
+        return "ID: " + _Id + "\tWeight: " + Weight + "\tValue: " + Value + "\tRatio: " + Ratio;
     }
 }
